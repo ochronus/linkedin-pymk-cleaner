@@ -1,0 +1,26 @@
+{
+
+  "name": "LinkedIn People You May Know cleaner",
+  "version": "0.1",
+  "description": "Prevent non-linkedin profiles from showing up in the 'people you may know' view",
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+            "128": "icons/icon128.png" },
+  "default_locale": "en",
+
+  "permissions": [
+ 
+  ],
+
+
+  "content_scripts": [
+    {
+      "matches": ["http://*.linkedin.com/people/pymk*", "https://*.linkedin.com/people/pymk*"],
+      "js": ["lib/jquery.min.js", "src/contentScript.js"]
+    }
+  ],
+
+  "manifest_version": 2
+
+
+}
